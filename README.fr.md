@@ -1,51 +1,53 @@
-# StudocuHack
+# Studocu PDF Exporter
 
 [English](README.md) | [简体中文](README.zh-CN.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Italiano](README.it.md) | [Türkçe](README.tr.md) | [Español](README.es.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Tiếng Việt](README.vi.md)
 
-StudocuHack est une application de bureau Windows qui traite les pages de documents Studocu prises en charge et les enregistre au format PDF. Elle propose une interface claire, un dossier de sortie personnalisable, une progression en direct, des journaux colorés et plusieurs méthodes de secours automatiques.
+Un outil de bureau Windows multilingue permettant d’exporter au format PDF les documents Studocu auxquels vous êtes autorisé à accéder. L’application propose une utilisation guidée, un dossier de sortie personnalisable, une progression en direct et des journaux colorés.
 
-> Utilisez ce projet uniquement pour les documents auxquels vous êtes autorisé à accéder. Respectez les droits d’auteur, les conditions de la plateforme et les lois applicables.
+> **Usage éducatif uniquement :** ce projet est destiné exclusivement à l’apprentissage, à la recherche et à la référence technique. Il n’est ni affilié, ni approuvé, ni autorisé par Studocu. Ne l’utilisez pas pour contourner des paywalls, des contrôles d’accès ou des protections du droit d’auteur.
+
+## Télécharger
+
+- [Dernière version](https://github.com/liqiheng777/Studocu_PDF-Exporter/releases/latest)
+- [Téléchargement direct de StudocuHack.exe](https://github.com/liqiheng777/Studocu_PDF-Exporter/releases/latest/download/StudocuHack.exe)
+
+L’EXE inclut Python, PyQt5 et l’environnement Playwright. Il n’est pas nécessaire d’installer Python.
 
 ## Fonctionnalités
 
-- Interface claire avec guide étape par étape
-- Sélecteur de langue intégré prenant en charge 10 langues
-- Taille de fenêtre adaptée automatiquement à l’écran
+- Parcours clair en trois étapes
+- Sélecteur intégré prenant en charge 10 langues
+- Taille de fenêtre adaptée automatiquement
 - Dossier de sortie PDF personnalisable
 - État en direct, barre de progression et journaux colorés
 - Utilise Microsoft Edge installé localement
-- Plusieurs méthodes de secours pour l’extraction et la génération PDF
-- EXE Windows autonome ne nécessitant pas Python
+- Plusieurs stratégies alternatives de génération PDF
+- EXE Windows autonome
 
-## Utiliser directement l’EXE
+## Utiliser l’EXE
 
-1. Téléchargez `StudocuHack.exe` depuis la dernière GitHub Release ou utilisez [`dist/StudocuHack.exe`](dist/StudocuHack.exe).
+1. Téléchargez `StudocuHack.exe` depuis la [dernière version](https://github.com/liqiheng777/Studocu_PDF-Exporter/releases/latest).
 2. Vérifiez que Microsoft Edge est installé.
 3. Enregistrez votre travail et fermez toutes les fenêtres Edge.
 4. Lancez `StudocuHack.exe`.
-5. Collez une URL de document Studocu prise en charge.
-6. Choisissez le dossier de sortie et cliquez sur **Télécharger le PDF**.
-7. Attendez la fin du traitement, puis ouvrez le PDF généré.
+5. Choisissez la langue de l’interface.
+6. Collez l’URL d’un document Studocu auquel vous êtes autorisé à accéder.
+7. Choisissez un dossier de sortie et démarrez le téléchargement PDF.
+8. Ouvrez le PDF généré une fois le traitement terminé.
 
-L’EXE inclut déjà Python, PyQt5 et l’environnement Playwright.
+### Avis Windows
 
-### Avertissements Windows
-
-- L’application ferme actuellement les processus Microsoft Edge au démarrage et à la fermeture. Enregistrez d’abord votre travail.
-- L’EXE n’est pas signé numériquement. Windows SmartScreen ou l’antivirus peut afficher un avertissement.
-- Windows 10/11 64 bits et Microsoft Edge sont requis.
+- L’application ferme actuellement les processus Edge lors de son démarrage et de sa fermeture.
+- L’EXE n’est pas signé numériquement ; Windows SmartScreen ou l’antivirus peut afficher un avertissement.
+- Téléchargez uniquement l’EXE depuis la page Releases officielle de ce dépôt.
 
 ## Exécuter depuis le code source
 
-### Prérequis
-
-- Windows 10/11 64 bits
-- Microsoft Edge
-- Python 3.11
+Prérequis : Windows 10/11 64 bits, Microsoft Edge et Python 3.11.
 
 ```powershell
-git clone <url-de-votre-depot>
-cd Studocu-Rehelper-main
+git clone https://github.com/liqiheng777/Studocu_PDF-Exporter.git
+cd Studocu_PDF-Exporter
 
 py -3.11 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
@@ -58,34 +60,23 @@ py -3.11 -m venv .venv
 powershell -ExecutionPolicy Bypass -File .\build_exe.ps1
 ```
 
-Le script crée `.venv`, installe les dépendances nécessaires et génère :
+Le fichier généré se trouve dans `dist\StudocuHack.exe`.
 
-```text
-dist\StudocuHack.exe
-```
+## Utilisation légale et responsable
 
-## Structure du projet
+- Traitez uniquement les documents que vous avez créés, que vous possédez ou que vous êtes explicitement autorisé à exporter.
+- Respectez le droit d’auteur, la vie privée, l’intégrité académique, les conditions de Studocu et les lois applicables.
+- N’utilisez pas ce projet pour contourner des abonnements, paywalls, authentifications ou contrôles d’accès.
+- Studocu est une marque de son propriétaire respectif. Ce projet indépendant n’a aucune relation officielle avec Studocu.
 
-```text
-studocuhack_desktop.py   Code source de l’application
-requirements.txt         Dépendances Python
-build_exe.ps1            Script de construction Windows
-StudocuHack.spec         Configuration PyInstaller
-img/icon128.ico          Icône de l’application
-dist/StudocuHack.exe     Exécutable Windows précompilé
-```
+## Licence MIT
 
-## Dépannage
+Copyright (c) 2026 QIHENG
 
-- **Edge est introuvable :** installez Microsoft Edge dans son emplacement par défaut.
-- **Le document ne charge pas :** ouvrez-le d’abord dans Edge et vérifiez son accessibilité.
-- **Windows bloque l’EXE :** utilisez uniquement l’EXE provenant de ce dépôt ou de la page Release officielle.
-- **Le premier lancement est lent :** l’EXE monofichier extrait d’abord son environnement.
+L’autorisation est accordée gratuitement à toute personne obtenant une copie de ce logiciel et des fichiers de documentation associés (le « Logiciel »), d’utiliser le Logiciel sans restriction, notamment les droits d’utiliser, copier, modifier, fusionner, publier, distribuer, sous-licencier et/ou vendre des copies du Logiciel, ainsi que d’autoriser les personnes auxquelles le Logiciel est fourni à le faire, sous réserve des conditions suivantes :
 
-## Contribution
+La notice de copyright ci-dessus et la présente notice d’autorisation doivent être incluses dans toutes les copies ou parties substantielles du Logiciel.
 
-Les issues, traductions, améliorations de documentation et pull requests sont les bienvenues.
+LE LOGICIEL EST FOURNI « EN L’ÉTAT », SANS GARANTIE D’AUCUNE SORTE, EXPRESSE OU IMPLICITE, NOTAMMENT SANS GARANTIE DE QUALITÉ MARCHANDE, D’ADÉQUATION À UN USAGE PARTICULIER ET D’ABSENCE DE CONTREFAÇON. EN AUCUN CAS LES AUTEURS OU TITULAIRES DU COPYRIGHT NE POURRONT ÊTRE TENUS RESPONSABLES DE TOUTE RÉCLAMATION, DOMMAGE OU AUTRE RESPONSABILITÉ, QUE CE SOIT DANS LE CADRE D’UN CONTRAT, D’UN DÉLIT OU AUTREMENT, DÉCOULANT DU LOGICIEL, DE SON UTILISATION OU D’AUTRES OPÉRATIONS PORTANT SUR LE LOGICIEL.
 
-## Licence
-
-Ajoutez un fichier de licence adapté avant de publier le dépôt.
+Le texte officiel de la licence est le fichier anglais [LICENSE](LICENSE).

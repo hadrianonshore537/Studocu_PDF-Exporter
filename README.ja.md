@@ -1,91 +1,82 @@
-# StudocuHack
+# Studocu PDF Exporter
 
 [English](README.md) | [简体中文](README.zh-CN.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Italiano](README.it.md) | [Türkçe](README.tr.md) | [Español](README.es.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Tiếng Việt](README.vi.md)
 
-StudocuHack は、対応する Studocu ドキュメントページを処理して PDF として保存する Windows デスクトップアプリです。分かりやすい画面、保存先の選択、リアルタイム進捗、色分けされたログ、自動フォールバック処理を備えています。
+アクセス権限を持つ Studocu 文書を PDF としてエクスポートするための、多言語対応 Windows デスクトップツールです。操作ガイド、保存先の選択、リアルタイム進捗、色分けされたログを提供します。
 
-> アクセス権限のあるドキュメントにのみ使用してください。著作権、プラットフォームの利用規約、適用される法律を遵守してください。
+> **教育・研究目的のみ：** 本プロジェクトは、学習、研究、技術的な参考のみを目的としています。Studocu との提携、承認、許可はありません。ペイウォール、アクセス制御、著作権保護を回避する目的では使用しないでください。
+
+## ダウンロード
+
+- [最新リリース](https://github.com/liqiheng777/Studocu_PDF-Exporter/releases/latest)
+- [StudocuHack.exe を直接ダウンロード](https://github.com/liqiheng777/Studocu_PDF-Exporter/releases/latest/download/StudocuHack.exe)
+
+EXE には Python、PyQt5、Playwright ランタイムが含まれているため、Python のインストールは不要です。
 
 ## 機能
 
-- 手順ガイド付きの分かりやすいデスクトップ画面
-- 10 言語に対応した内蔵の表示言語切り替え
-- 画面サイズに応じたウィンドウの自動調整
+- 分かりやすい 3 ステップの操作フロー
+- 10 言語に対応した内蔵言語切り替え
+- 画面に応じたウィンドウサイズの自動調整
 - PDF 保存先フォルダーの選択
 - リアルタイム状態、進捗バー、色分けログ
 - ローカルにインストールされた Microsoft Edge を使用
-- 複数のドキュメント抽出・PDF 作成フォールバック方式
-- Python のインストールが不要な Windows EXE
+- 複数の PDF 生成代替方式
+- 単体で動作する Windows EXE
 
-## EXE を直接使用する
+## EXE の使い方
 
-1. 最新の GitHub Release から `StudocuHack.exe` をダウンロードするか、[`dist/StudocuHack.exe`](dist/StudocuHack.exe) を使用します。
+1. [最新リリース](https://github.com/liqiheng777/Studocu_PDF-Exporter/releases/latest)から `StudocuHack.exe` をダウンロードします。
 2. Microsoft Edge がインストールされていることを確認します。
-3. 作業を保存し、すべての Edge ウィンドウを閉じます。
-4. `StudocuHack.exe` を実行します。
-5. 対応する Studocu ドキュメント URL を貼り付けます。
-6. 保存先を選び、**PDF ダウンロード開始**をクリックします。
-7. 処理完了後、生成された PDF を開きます。
-
-EXE には Python、PyQt5、Playwright ランタイムが含まれています。
+3. ブラウザー上の作業を保存し、すべての Edge ウィンドウを閉じます。
+4. `StudocuHack.exe` を起動します。
+5. インターフェース言語を選択します。
+6. アクセス権限を持つ Studocu 文書の URL を貼り付けます。
+7. 保存先を選び、PDF ダウンロードを開始します。
+8. 処理完了後、生成された PDF を開きます。
 
 ### Windows に関する注意
 
-- 現在のアプリは起動時と終了時に実行中の Microsoft Edge プロセスを終了します。先にブラウザー上の作業を保存してください。
-- EXE はデジタル署名されていないため、Windows SmartScreen やウイルス対策ソフトが警告する場合があります。
-- Windows 10/11 64 ビット版と Microsoft Edge が必要です。
+- 現在、アプリは起動時と終了時に実行中の Edge プロセスを終了します。
+- EXE はデジタル署名されていないため、Windows SmartScreen やウイルス対策ソフトが警告を表示する場合があります。
+- EXE は本リポジトリの公式 Releases ページからのみダウンロードしてください。
 
-## ソースコードから実行する
+## ソースコードから実行
 
-### 必要環境
-
-- Windows 10/11 64 ビット
-- Microsoft Edge
-- Python 3.11
+要件：Windows 10/11 64 ビット、Microsoft Edge、Python 3.11。
 
 ```powershell
-git clone <リポジトリURL>
-cd Studocu-Rehelper-main
+git clone https://github.com/liqiheng777/Studocu_PDF-Exporter.git
+cd Studocu_PDF-Exporter
 
 py -3.11 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe .\studocuhack_desktop.py
 ```
 
-## EXE をビルドする
+## EXE のビルド
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\build_exe.ps1
 ```
 
-スクリプトは `.venv` を作成し、必要な依存関係をインストールして次のファイルを生成します。
+生成ファイルは `dist\StudocuHack.exe` にあります。
 
-```text
-dist\StudocuHack.exe
-```
+## 適法かつ責任ある利用
 
-## プロジェクト構成
+- 自分で作成した文書、所有する文書、または明示的にエクスポートを許可された文書のみを処理してください。
+- 著作権、プライバシー、学術的誠実性、Studocu の利用規約、適用法令を遵守してください。
+- サブスクリプション、ペイウォール、認証、アクセス制御の回避には使用しないでください。
+- Studocu は各権利者の商標です。本プロジェクトは Studocu と公式な関係を持たない独立プロジェクトです。
 
-```text
-studocuhack_desktop.py   デスクトップアプリのソースコード
-requirements.txt         Python 依存関係
-build_exe.ps1            Windows 用ビルドスクリプト
-StudocuHack.spec         PyInstaller 設定
-img/icon128.ico          アプリアイコン
-dist/StudocuHack.exe     ビルド済み Windows 実行ファイル
-```
+## MIT ライセンス
 
-## トラブルシューティング
+Copyright (c) 2026 QIHENG
 
-- **Edge が見つからない:** Microsoft Edge を標準の場所にインストールしてください。
-- **ドキュメントが読み込まれない:** 先に Edge で開き、アクセス可能か確認してください。
-- **Windows が EXE をブロックする:** このリポジトリまたは公式 Release ページから取得したファイルのみ使用してください。
-- **初回起動が遅い:** 単一ファイル EXE は起動前に内部ランタイムを展開します。
+本ソフトウェアおよび関連文書ファイル（以下「ソフトウェア」）の複製を取得するすべての者に対し、ソフトウェアを使用、複製、変更、結合、公開、配布、サブライセンス、および／または販売する権利を含むがこれらに限定されない、ソフトウェアを制限なく取り扱う権利を無償で許可します。また、ソフトウェアを提供された者が同様に行うことを、以下の条件に従って許可します。
 
-## コントリビューション
+上記の著作権表示および本許諾表示は、ソフトウェアのすべての複製または重要な部分に記載するものとします。
 
-Issue、翻訳、ドキュメント改善、Pull Request を歓迎します。
+本ソフトウェアは「現状のまま」提供され、商品性、特定目的への適合性、および権利非侵害に関する保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証もありません。著作者または著作権者は、契約、不法行為、その他の行為に起因するかを問わず、ソフトウェア、ソフトウェアの使用、またはその他の取引から生じるいかなる請求、損害、その他の責任についても責任を負いません。
 
-## ライセンス
-
-リポジトリを公開する前に、適切なライセンスファイルを追加してください。
+正式なライセンス本文は英語の [LICENSE](LICENSE) ファイルです。

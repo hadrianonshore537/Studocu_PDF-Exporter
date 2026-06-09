@@ -1,41 +1,47 @@
-# StudocuHack
+# Studocu PDF Exporter
 
 [English](README.md) | [简体中文](README.zh-CN.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Italiano](README.it.md) | [Türkçe](README.tr.md) | [Español](README.es.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Tiếng Việt](README.vi.md)
 
-StudocuHack is a Windows desktop application that processes supported Studocu document pages and saves them as PDF files. It provides a clear graphical interface, selectable output directory, live progress, colored logs, and automatic fallback strategies.
+A multilingual Windows desktop tool for exporting Studocu documents that you are authorized to access as PDF files. The application provides guided operation, a selectable output folder, live progress, colored logs, and multiple PDF generation strategies.
 
-> Use this project only for documents you are authorized to access. Respect copyright, platform terms, and applicable laws.
+> **Educational use only:** This project is intended solely for learning, research, and technical reference. It is not affiliated with, endorsed by, or authorized by Studocu. Do not use it to bypass paywalls, access controls, copyright protections, or to obtain content you are not authorized to access.
+
+## Download
+
+For most users, download the latest Windows executable from:
+
+- [Latest Release](https://github.com/liqiheng777/Studocu_PDF-Exporter/releases/latest)
+- [Direct download: StudocuHack.exe](https://github.com/liqiheng777/Studocu_PDF-Exporter/releases/latest/download/StudocuHack.exe)
+
+The EXE includes Python, PyQt5, and the Playwright runtime. Python does not need to be installed.
 
 ## Features
 
-- Simple desktop interface with step-by-step guidance
-- Built-in interface language switcher with 10 languages
-- Automatically sized window for large and small screens
+- Clear three-step desktop workflow
+- Built-in interface switcher supporting 10 languages
+- Automatically sized window for different screens
 - Selectable PDF output directory
 - Live status, progress bar, and colored processing logs
 - Uses the locally installed Microsoft Edge browser
-- Multiple document extraction and PDF generation fallback strategies
-- Standalone Windows EXE for users who do not want to install Python
+- Multiple PDF generation fallback strategies
+- Standalone Windows executable
 
 ## Use the EXE
 
-This is the easiest option for most users.
-
-1. Download `StudocuHack.exe` from the latest GitHub Release, or use [`dist/StudocuHack.exe`](dist/StudocuHack.exe).
+1. Download `StudocuHack.exe` from the [latest release](https://github.com/liqiheng777/Studocu_PDF-Exporter/releases/latest).
 2. Make sure Microsoft Edge is installed.
-3. Save your work and close all Edge windows.
+3. Save your browser work and close all Edge windows.
 4. Run `StudocuHack.exe`.
-5. Paste a supported Studocu document URL.
-6. Select an output folder and click **Start Download PDF**.
-7. Wait for processing to finish, then click **Open generated PDF**.
+5. Select your preferred interface language.
+6. Paste a Studocu document URL that you are authorized to access.
+7. Select an output folder and click **Start PDF Download**.
+8. Wait for processing to finish, then open the generated PDF.
 
-The EXE already includes Python, PyQt5, and the Playwright runtime. Python does not need to be installed.
-
-### Windows warning
+### Windows Notice
 
 - The application currently closes running Microsoft Edge processes when starting and exiting. Save your browser work first.
 - The EXE is not digitally signed, so Windows SmartScreen or antivirus software may display a warning.
-- The application requires Windows 10/11 64-bit and Microsoft Edge.
+- Only download the EXE from this repository's official Releases page.
 
 ## Run From Source
 
@@ -48,8 +54,8 @@ The EXE already includes Python, PyQt5, and the Playwright runtime. Python does 
 ### Installation
 
 ```powershell
-git clone <your-repository-url>
-cd Studocu-Rehelper-main
+git clone https://github.com/liqiheng777/Studocu_PDF-Exporter.git
+cd Studocu_PDF-Exporter
 
 py -3.11 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
@@ -58,13 +64,11 @@ py -3.11 -m venv .venv
 
 ## Build the EXE
 
-The repository includes a PyInstaller configuration and one-click build script.
-
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\build_exe.ps1
 ```
 
-The script automatically creates `.venv`, installs dependencies when needed, and builds:
+The build script creates:
 
 ```text
 dist\StudocuHack.exe
@@ -78,31 +82,47 @@ requirements.txt         Python dependencies
 build_exe.ps1            One-click Windows build script
 StudocuHack.spec         PyInstaller build configuration
 img/icon128.ico          Application icon
-dist/StudocuHack.exe     Prebuilt Windows executable
+README*.md               Multilingual documentation
 ```
+
+## Legal and Responsible Use
+
+- Only process documents that you created, own, or are explicitly authorized to access and export.
+- Respect copyright, privacy, academic integrity, Studocu's terms of service, and applicable laws.
+- Do not use this project to bypass subscriptions, paywalls, authentication, technical restrictions, or access controls.
+- The maintainers do not encourage infringement and are not responsible for misuse.
+- Studocu is a trademark of its respective owner. This independent project has no official relationship with Studocu.
 
 ## Troubleshooting
 
-**Edge cannot be found**
+**Edge cannot be found:** Install Microsoft Edge in its default Windows location.
 
-Install Microsoft Edge in its default Windows location.
+**The document does not load:** Open the document in Edge first and confirm that your account is authorized to access it.
 
-**The document does not load**
+**Windows blocks the EXE:** Confirm that it came from the official Releases page, then review the warning before continuing.
 
-Open the document in Edge first, confirm that it is accessible, then try again.
+**The first launch is slow:** The single-file EXE extracts its bundled runtime before opening.
 
-**Windows blocks the EXE**
+## MIT License
 
-Only continue if you downloaded it from this repository or its official Release page. You may need to choose **More info → Run anyway**.
+Copyright (c) 2026 QIHENG
 
-**The first launch is slow**
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-The single-file EXE extracts its bundled runtime before opening, which can take several seconds.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-## Contributing
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-Issues, translations, documentation improvements, and pull requests are welcome.
-
-## License
-
-Add a license file before publishing the repository. Choose a license that matches how you want others to use and redistribute the project.
+See the canonical license text in [LICENSE](LICENSE).

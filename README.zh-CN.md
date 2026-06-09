@@ -1,41 +1,47 @@
-# StudocuHack
+# Studocu PDF Exporter
 
 [English](README.md) | [简体中文](README.zh-CN.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Italiano](README.it.md) | [Türkçe](README.tr.md) | [Español](README.es.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Tiếng Việt](README.vi.md)
 
-StudocuHack 是一款 Windows 桌面应用，用于处理受支持的 Studocu 文档页面并保存为 PDF。软件提供清晰的图形界面、可选保存目录、实时进度、彩色日志以及自动降级处理方案。
+一款多语言 Windows 桌面工具，用于将用户有权访问的 Studocu 文档导出为 PDF。软件提供清晰的操作引导、可选保存目录、实时进度、彩色日志以及多种 PDF 生成方案。
 
-> 请仅处理你有权访问的文档，并遵守版权、平台条款与当地法律。
+> **仅供学习与研究：** 本项目仅用于学习、研究和技术参考，与 Studocu 官方无关，未获得 Studocu 的认可或授权。不得使用本项目绕过付费墙、访问控制、版权保护，或获取无权访问的内容。
+
+## 下载程序
+
+普通用户推荐直接下载最新版 Windows 程序：
+
+- [最新 Release 页面](https://github.com/liqiheng777/Studocu_PDF-Exporter/releases/latest)
+- [直接下载 StudocuHack.exe](https://github.com/liqiheng777/Studocu_PDF-Exporter/releases/latest/download/StudocuHack.exe)
+
+EXE 已包含 Python、PyQt5 和 Playwright 运行环境，无需另外安装 Python。
 
 ## 功能特点
 
-- 清晰易懂的桌面界面与三步使用引导
+- 清晰易懂的三步操作引导
 - 内置界面语言切换，支持 10 种语言
 - 根据屏幕大小自动调整窗口尺寸
 - 可自由选择 PDF 保存目录
 - 实时状态、进度条与彩色处理日志
 - 使用电脑本地安装的 Microsoft Edge
-- 多种文档提取与 PDF 生成备用方案
-- 提供无需安装 Python 的 Windows EXE
+- 多种 PDF 生成备用方案
+- 提供独立 Windows EXE
 
-## 直接使用 EXE
+## 使用 EXE
 
-这是最适合普通用户的使用方式。
-
-1. 从最新 GitHub Release 下载 `StudocuHack.exe`，或使用 [`dist/StudocuHack.exe`](dist/StudocuHack.exe)。
+1. 从[最新 Release](https://github.com/liqiheng777/Studocu_PDF-Exporter/releases/latest)下载 `StudocuHack.exe`。
 2. 确保电脑已安装 Microsoft Edge。
 3. 保存浏览器中的工作并关闭所有 Edge 窗口。
 4. 运行 `StudocuHack.exe`。
-5. 粘贴受支持的 Studocu 文档链接。
-6. 选择保存目录，然后点击“开始下载 PDF”。
-7. 等待处理完成，再点击“打开生成的 PDF”。
-
-EXE 已包含 Python、PyQt5 和 Playwright 运行环境，无需另外安装 Python。
+5. 选择需要的界面语言。
+6. 粘贴你有权访问的 Studocu 文档链接。
+7. 选择保存目录，然后点击“开始下载 PDF”。
+8. 等待处理完成，再打开生成的 PDF。
 
 ### Windows 使用提醒
 
 - 软件启动和退出时目前会关闭正在运行的 Microsoft Edge，请提前保存浏览器工作。
-- EXE 尚未进行数字签名，Windows SmartScreen 或杀毒软件可能会显示警告。
-- 软件需要 Windows 10/11 64 位系统与 Microsoft Edge。
+- EXE 尚未进行数字签名，Windows SmartScreen 或杀毒软件可能显示警告。
+- 请仅从本仓库官方 Releases 页面下载 EXE。
 
 ## 从源代码运行
 
@@ -48,8 +54,8 @@ EXE 已包含 Python、PyQt5 和 Playwright 运行环境，无需另外安装 Py
 ### 安装与运行
 
 ```powershell
-git clone <你的仓库地址>
-cd Studocu-Rehelper-main
+git clone https://github.com/liqiheng777/Studocu_PDF-Exporter.git
+cd Studocu_PDF-Exporter
 
 py -3.11 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
@@ -58,13 +64,11 @@ py -3.11 -m venv .venv
 
 ## 打包 EXE
 
-项目已经提供 PyInstaller 配置和一键打包脚本：
-
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\build_exe.ps1
 ```
 
-脚本会自动创建 `.venv`、安装缺失依赖，并生成：
+打包完成后生成：
 
 ```text
 dist\StudocuHack.exe
@@ -78,31 +82,35 @@ requirements.txt         Python 依赖
 build_exe.ps1            Windows 一键打包脚本
 StudocuHack.spec         PyInstaller 打包配置
 img/icon128.ico          程序图标
-dist/StudocuHack.exe     已构建的 Windows 程序
+README*.md               多语言说明文档
 ```
+
+## 合规与责任说明
+
+- 仅处理由你创建、归你所有，或明确获得访问与导出授权的文档。
+- 请遵守版权、隐私、学术诚信、Studocu 服务条款及适用法律。
+- 不得使用本项目绕过订阅、付费墙、身份验证、技术限制或访问控制。
+- 项目维护者不鼓励任何侵权行为，也不对滥用行为承担责任。
+- Studocu 是其权利人的商标，本独立项目与 Studocu 不存在官方关系。
 
 ## 常见问题
 
-**提示找不到 Edge**
+**提示找不到 Edge：** 请将 Microsoft Edge 安装在 Windows 默认目录。
 
-请将 Microsoft Edge 安装在 Windows 默认目录。
+**文档无法加载：** 先在 Edge 中打开文档，并确认你的账户已获授权访问。
 
-**文档无法加载**
+**Windows 阻止运行 EXE：** 请确认文件来自官方 Releases 页面，并仔细查看警告后再决定是否运行。
 
-先在 Edge 中打开文档并确认可以访问，然后重新尝试。
+**首次启动较慢：** 单文件 EXE 启动前需要解压内置运行环境。
 
-**Windows 阻止运行 EXE**
+## MIT 许可证
 
-请确认文件来自本仓库或官方 Release 页面，然后可选择“更多信息 → 仍要运行”。
+版权所有 (c) 2026 QIHENG
 
-**首次启动较慢**
+特此免费授予任何获得本软件及相关文档文件（以下简称“软件”）副本的人不受限制地处理本软件的权利，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权利，并允许获得本软件的人这样做，但须符合以下条件：
 
-单文件 EXE 启动前需要解压内置运行环境，可能需要等待几秒。
+上述版权声明和本许可声明应包含在本软件的所有副本或主要部分中。
 
-## 参与贡献
+本软件按“原样”提供，不提供任何形式的明示或默示保证，包括但不限于对适销性、特定用途适用性和非侵权性的保证。在任何情况下，作者或版权持有人均不对因本软件或本软件的使用或其他交易而产生、引起或与之相关的任何索赔、损害或其他责任承担责任，无论该责任是基于合同、侵权行为还是其他原因。
 
-欢迎提交 Issue、翻译、文档改进和 Pull Request。
-
-## 开源许可证
-
-发布仓库前请添加许可证文件，并根据你希望他人如何使用和分发本项目来选择合适的许可证。
+正式许可文本以英文 [LICENSE](LICENSE) 文件为准。
